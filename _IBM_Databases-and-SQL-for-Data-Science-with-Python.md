@@ -1,7 +1,7 @@
 # Course Overview
 The course is structured into 6 weeks, each focusing on a specific topic. 
 
-Week 1: Getting started with SQL 
+## Week 1: Getting started with SQL 
 This week will let you learn the basics of SQL and databases. You will also learn how to query tables in a database. 
 
 Week 2: Introduction to Relational Databases and Tables 
