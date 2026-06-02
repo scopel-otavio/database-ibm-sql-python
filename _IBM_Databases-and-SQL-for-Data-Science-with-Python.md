@@ -248,3 +248,82 @@ DELETE FROM table_name WHERE [condition];
 ```sql
 DELETE FROM placeofinterest WHERE city IN ('Rome','Vienna');
 ```
+
+
+
+
+# Module 02 - Introduction to Relational Databases and Tables
+
+## Introduction to Relational Databases and Tables: Examples to ALTER and TRUNCATE tables using MySQL
+
+In the previous video, the ALTER and TRUNCATE syntax applies to DB2. There are variations in syntax between different databases. This reading will explore some examples of ALTER and TRUNCATE statements using MySQL.
+
+
+### Objective(s)
+At the end of this reading, you will be able to:
+- Use the `ALTER TABLE` statement in the correct syntax.
+- Use `TRUNCATE` statements in syntax.
+- Execute examples of `ALTER` and `TRUNCATE` statements.
+
+
+### ALTER TABLE
+`ALTER TABLE` statements can be used to **add** or **remove** columns from a table, to modify the data type of columns, to add or remove keys, and to add or remove constraints. The syntax of the `ALTER TABLE` statement is:
+
+#### ADD COLUMN syntax
+```sql
+ALTER TABLE table_name
+ADD column_name data_type;
+```
+A variation of the syntax for adding column is:
+```sql
+ALTER TABLE table_name
+ADD COLUMN column_name data_type;
+```
+By default, all the entries are initially assigned the value `NULL`. You can then use `UPDATE` statements to add the necessary column values. For example, to add a **telephone_number** column to the **author** table in the **library** database, the statement will be written as:
+
+```sql
+ALTER TABLE author 
+ADD telephone_number BIGINT;
+```
+
+Here, `BIGINT` is a data type for Big Integer.After adding the entries to the new column, a sample output is shown below.
+
+![img001]
+
+### Modify column data type
+```sql
+ALTER TABLE table_name
+MODIFY column_name data_type;
+```
+Sometimes, the data presented may be in a different format than required. In such a case, we need to modify the data_type of the column. For example, using a numeric data type for telephone_number means you cannot include parentheses, plus signs, or dashes as part of the number. For such entries, the appropriate choice of data_type is `CHAR`.
+
+To modify the data type, the statement will be written as:
+```sql
+ALTER TABLE author
+MODIFY telephone_number CHAR(20);
+```
+The entries can then be updated using `UPDATE` statements. An updated version of the "author" table is shown below.
+
+![img002]
+
+
+### TRUNCATE Table
+`TRUNCATE TABLE` statements are used to delete all of the rows in a table. The syntax of the statement is:
+```sql
+TRUNCATE TABLE table_name;
+```
+So, to truncate the "author" table, the statement will be written as:
+```sql
+TRUNCATE TABLE author;
+```
+The output would be as shown in the image below.
+![img003]
+Note: The `TRUNCATE` statement will delete the rows and not the table.
+
+
+
+# PUBLIC
+
+[img001]: /_public/img001_Add_column.png
+[img002]: /_public/img002_Add_dashes.png
+[img003]: /_public/img003_Truncate.png
