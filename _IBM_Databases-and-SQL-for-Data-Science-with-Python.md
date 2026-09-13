@@ -34,13 +34,73 @@ Upon completion of the course, you will receive a shareable certificate that you
 
 
 
-# Module 01 - Getting Started with SQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MODULE 01 - Getting Started with SQL
+
+
+
+
+
+
+
+
+
 
 ## BASIC SQL: SELECT statement examples
+
+
 
 ### Objectives
 At the end of this reading, you will learn how to:
 - Use various `SELECT` queries to retrieve data from the database.
+
+
 
 ### SELECT statement usage
 `SELECT` is classified as a Database Query command used to retrieve information from a database table. There are various forms in which a SELECT statement is used.
@@ -61,6 +121,7 @@ SELECT <COLUMNS> FROM TABLE_1 WHERE <predicate>;
 ```
 
 
+
 ### SELECT examples
 Let's look at these codes in action. Below is a database table called `COUNTRY`, which contains the columns `ID`, `Name`, and `CCode`. Here, `CCode` is a 2 letter country code.
 
@@ -77,74 +138,78 @@ Let's look at these codes in action. Below is a database table called `COUNTRY`,
 | 9 | Canada | CA |
 | 10 | Brazil | BR |
 
-#### Example #1
+#### Example 1
 When we apply the `SELECT` code ```SELECT * FROM COUNTRY ;```, the query retrieves all rows and columns from the database table named `COUNTRY`.
 - `SELECT *` instructs the database to select all columns from the table.
 - `FROM COUNTRY` specifies the table from which to retrieve the data. In this case, it's the "COUNTRY" table, so the entire table appears, as shown below.
 
-Response:
-| ID | Name | CCode |
-|:---|:---|:---|
-| 1 | United States of America | US |
-| 2 | China | CH |
-| 3 | Japan | JA |
-| 4 | Germany | GE |
-| 5 | India | IN |
-| 6 | United Kingdom | UK |
-| 7 | France | FR |
-| 8 | Italy | IT |
-| 9 | Canada | CA |
-| 10 | Brazil | BR |
+  Response:
+
+  | IAD | Name | CCode |
+  |:---|:---|:---|
+  | 1 | United States of America | US |
+  | 2 | China | CH |
+  | 3 | Japan | JA |
+  | 4 | Germany | GE |
+  | 5 | India | IN |
+  | 6 | United Kingdom | UK |
+  | 7 | France | FR |
+  | 8 | Italy | IT |
+  | 9 | Canada | CA |
+  | 10 | Brazil | BR |
 
 
 
-#### Example #2
+#### Example 2
 The SQL query `SELECT ID, Name FROM COUNTRY ;` retrieves specific columns from a database table named `COUNTRY`.
 - `SELECT ID, Name` instructs the database to select two specific columns from the table: "ID" and "Name." It will return these two columns for each row that matches the query criteria.
 - `FROM COUNTRY` specifies the table from which to retrieve the data, which is the "COUNTRY" table. The table below shows that only the "ID" and "Name" columns were retrieved.
 
-Response:
-| ID | Name |
-|:---|:---|
-| 1 | United States of America |
-| 2 | China |
-| 3 | Japan |
-| 4 | Germany |
-| 5 | India |
-| 6 | United Kingdom |
-| 7 | France |
-| 8 | Italy |
-| 9 | Canada |
-| 10 | Brazil |
+  Response:
+  | ID | Name |
+  |:---|:---|
+  | 1 | United States of America |
+  | 2 | China |
+  | 3 | Japan |
+  | 4 | Germany |
+  | 5 | India |
+  | 6 | United Kingdom |
+  | 7 | France |
+  | 8 | Italy |
+  | 9 | Canada |
+  | 10 | Brazil |
 
-#### Example #3
+#### Example 3
+
 The SQL query `SELECT * FROM COUNTRY WHERE ID <= 5 ;` retrieves all columns from the `COUNTRY` table where the value in the `ID` column is less than or equal to 5.
 - `SELECT *` instructs the database to select all columns from the specified table.
 - `FROM COUNTRY` specifies the table from which to retrieve the data, which is the `COUNTRY` table.
 - `WHERE ID <= 5 ;` is a condition that filters the rows from the table. It will only return rows where the value in the "ID" column is less than or equal to 5. In the table below, you can see that only rows 1-5 were retrieved.
 
-Response:
-| ID | Name | CCode |
-|:---|:---|:---|
-| 1 | United States of America | US |
-| 2 | China | CH |
-| 3 | Japan | JA |
-| 4 | Germany | GE |
-| 5 | India | IN |
+  Response:
+  | ID | Name | CCode |
+  |:---|:---|:---|
+  | 1 | United States of America | US |
+  | 2 | China | CH |
+  | 3 | Japan | JA |
+  | 4 | Germany | GE |
+  | 5 | India | IN |
 
 
-#### Example #4
+#### Example 4
 The SQL query `SELECT * FROM COUNTRY WHERE CCode = 'CA' ;` retrieves all columns from the `COUNTRY` table where the value in the `CCode` column is equal to `'CA'`.
 - `SELECT *` instructs the database to select all columns from the specified table.
 - `FROM COUNTRY` specifies the bale from which to retrieve the data, which is the `'COUNTRY'` table.
 - `WHERE CCode = 'CA';` is a condition that filters the rows from the table. It will only return rows where the value in the `CCode` column is equal to `'CA'`. In the table below, you will find that only the CA column was retrieved.
 
-Response:
-| ID | Name | CCode |
-|:---|:---|:---|
-| 9 | Canada | CA |
+  Response:
+  | ID | Name | CCode |
+  |:---|:---|:---|
+  | 9 | Canada | CA |
 
 In the lab that follows later in the module, you will apply these concepts and practice more SELECT queries hands-on.
+
+
 
 ### Summary
 In this reading, you learned that:
@@ -158,8 +223,15 @@ In this reading, you learned that:
 
 
 
+
+
+
+
+
 ## BASIC SQL: SQL Cheat Sheet: Basics - SELECT, INSERT, UPDATE, DELETE, COUNT, DISTINCT, LIMIT
 Use this cheat sheet for various SQL commands and their syntax, descriptions, and examples.
+
+
 
 ### SELECT
 `SELECT` statement is used to fetch data from a database.
@@ -172,6 +244,8 @@ SELECT column1, column2, ... FROM table_name;
 SELECT city FROM placeofinterest;
 ```
 
+
+
 ### WHERE
 `WHERE` clause is used to extract only those records that fulfill a specified condition.
 #### Syntax:
@@ -182,6 +256,8 @@ SELECT column1, column2, ...FROM table_name WHERE condition;
 ```sql
 SELECT * FROM placeofinterest WHERE city = 'Rome' ;
 ```
+
+
 
 ### COUNT
 `COUNT` is a function that takes the name of a column as argument and counts the number of rows when the column is not NULL.
@@ -194,6 +270,8 @@ SELECT COUNT * FROM table_name ;
 SELECT COUNT(country) FROM placeofinterest WHERE country='Canada';
 ```
 
+
+
 ### DISTINCT
 `DISTINCT` function is used to specify that the statement is a query which returns unique values in specified columns.
 #### Syntax:
@@ -204,6 +282,8 @@ SELECT DISTINCT columnname FROM table_name;
 ```sql
 SELECT DISTINCT country FROM placeofinterest WHERE type='historical';
 ```
+
+
 
 ### LIMIT
 `LIMIT` is a clause to specify the maximum number of rows the result set must have.
@@ -216,6 +296,8 @@ SELECT * FROM table_name LIMIT number;
 SELECT * FROM placeofinterest WHERE airport="pearson" LIMIT 5;
 ```
 
+
+
 ### INSERT
 `INSERT` is used to insert new rows in the table.
 #### Syntax:
@@ -227,6 +309,8 @@ INSERT INTO table_name (column1,column2,column3...) VALUES(value1,value2,value3.
 INSERT INTO placeofinterest (name,type,city,country,airport) VALUES('Niagara Waterfalls','Nature','Toronto','Canada','Pearson');
 ```
 
+
+
 ### UPDATE
 `UPDATE` used to update the rows in the table.
 #### Syntax:
@@ -237,6 +321,8 @@ UPDATE table_name SET[[column1]=[VALUES]] WHERE [condition];
 ```sql
 UPDATE placeofinterest SET name = 'Niagara Falls' WHERE name = "Niagara Waterfalls";
 ```
+
+
 
 ### DELETE
 `DELETE` statement is used to remove rows from the table which are specified in the `WHERE` condition.
@@ -252,11 +338,66 @@ DELETE FROM placeofinterest WHERE city IN ('Rome','Vienna');
 
 
 
-# Module 02 - Introduction to Relational Databases and Tables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MODULE 02 - Introduction to Relational Databases and Tables
+
+
+
+
+
+
+
+
+
 
 ## Introduction to Relational Databases and Tables: Examples to ALTER and TRUNCATE tables using MySQL
-
 In the previous video, the ALTER and TRUNCATE syntax applies to DB2. There are variations in syntax between different databases. This reading will explore some examples of ALTER and TRUNCATE statements using MySQL.
+
 
 
 ### Objective(s)
@@ -264,6 +405,7 @@ At the end of this reading, you will be able to:
 - Use the `ALTER TABLE` statement in the correct syntax.
 - Use `TRUNCATE` statements in syntax.
 - Execute examples of `ALTER` and `TRUNCATE` statements.
+
 
 
 ### ALTER TABLE
@@ -279,6 +421,7 @@ A variation of the syntax for adding column is:
 ALTER TABLE table_name
 ADD COLUMN column_name data_type;
 ```
+
 By default, all the entries are initially assigned the value `NULL`. You can then use `UPDATE` statements to add the necessary column values. For example, to add a **telephone_number** column to the **author** table in the **library** database, the statement will be written as:
 
 ```sql
@@ -634,8 +777,17 @@ Congratulations! You have completed this lesson. At this point in the course, yo
 
 
 
+
+
+
+
+
+
+
 ## SQL Cheat Sheet: CREATE TABLE, ALTER, DROP, TRUNCATE
 Use this cheat sheet for various SQL commands and their syntax, descriptions, and examples.
+
+
 
 ### CREATE TABLE
 `CREATE TABLE` statement is to create the table. Each column in the table is specified with its name, data type and an optional keyword which could be `PRIMARY KEY`, `NOT NULL`, etc.,
@@ -648,6 +800,8 @@ CREATE TABLE table_name (col1 datatype optional keyword, col2 datatype optional 
 ```sql
 CREATE TABLE employee ( employee_id char(2) PRIMARY KEY, first_name varchar(30) NOT NULL, mobile int);
 ```
+
+
 
 ### ALTER TABLE - ADD COLUMN
 `ALTER TABLE` statement is used to add the columns to a table.
@@ -699,17 +853,19 @@ DB2 -
 ALTER TABLE employee ALTER COLUMN mobile SET DATA TYPE CHAR(20);
 ```
 
+
+
 ### ALTER TABLE - DROP COLUMN
 `ALTER TABLE DROP COLUMN`  statement is used to remove columns from a table.
 
-### Syntax (MySQL/DB2):
+#### Syntax (MySQL/DB2):
 
 ALTER TABLE table_name DROP COLUMN column_name_1 ;
 Example (MySQL/DB2):
 
-1
+```sql
 ALTER TABLE employee DROP COLUMN mobile ;
-
+```
 
 
 ### ALTER TABLE - RENAME COLUMN
@@ -775,6 +931,68 @@ DROP TABLE table_name ;
 ```sql
 DROP TABLE employee ;
 ```
+
+
+
+
+
+
+
+
+
+
+## Using IBM Db2 - Hands-on Lab Using IBM DB2
+
+Now that you are familiar with the IBM DB2 database, you can practice the SQL basics concepts learned in this module using DB2. To do so, complete each of the labs below in sequence: 
+- [Hands-on Lab: Create Tables using SQL Scripts and Load Data into Tables](https://cf-courses-data.static.labs.skills.network/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Create%20tables%20using%20SQL%20scripts%20and%20Load%20data%20into%20tables/instructional-labs.md.html?t=1770028821)
+- [Hands on Lab : CREATE, ALTER, TRUNCATE, DROP Table](https://cf-courses-data.static.labs.skills.network/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20CREATE%20-%20ALTER%20-%20TRUNCATE%20-%20DROP/instructional-labs.md.html?t=1770029054)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # PUBLIC
