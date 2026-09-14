@@ -396,7 +396,7 @@ DELETE FROM placeofinterest WHERE city IN ('Rome','Vienna');
 
 
 ## Introduction to Relational Databases and Tables: Examples to ALTER and TRUNCATE tables using MySQL
-In the previous video, the ALTER and TRUNCATE syntax applies to DB2. There are variations in syntax between different databases. This reading will explore some examples of ALTER and TRUNCATE statements using MySQL.
+In the previous video, the `ALTER` and `TRUNCATE` syntax applies to DB2. There are variations in syntax between different databases. This reading will explore some examples of `ALTER` and `TRUNCATE` statements using `MySQL`.
 
 
 
@@ -450,6 +450,7 @@ The entries can then be updated using `UPDATE` statements. An updated version of
 ![img002]
 
 
+
 ### TRUNCATE Table
 `TRUNCATE TABLE` statements are used to delete all of the rows in a table. The syntax of the statement is:
 ```sql
@@ -461,7 +462,13 @@ TRUNCATE TABLE author;
 ```
 The output would be as shown in the image below.
 ![img003]
-Note: The `TRUNCATE` statement will delete the rows and not the table.
+
+**Note:** The `TRUNCATE` statement will delete the rows and not the table.
+
+
+
+
+
 
 
 
@@ -469,9 +476,12 @@ Note: The `TRUNCATE` statement will delete the rows and not the table.
 
 ## Introduction to Relational Databases and Tables: Examples to CREATE and DROP tables
 
+
+
 ### Objective(s)
 At the end of this lab, you will be able to:
 - Create and Drop tables in the database.
+
 
 
 ### CREATE TABLE statement
@@ -541,13 +551,23 @@ In a hands-on lab later in this module, you will practice creating tables and ot
 
 
 
-## Understanding Relational Model Constraints
+
+
+
+
+
+
+
+## Introduction to Relational Databases and Tables: Understanding Relational Model Constraints
+
+
 
 ### Objectives
 After completing this reading, you will be able to:
 - Define and identify entity integrity, referential integrity, and domain integrity constraints
 - Explain how each constraint maintains data integrity
 - Recognize examples of how these constraints are implemented in SQL
+
 
 
 ### Overview
@@ -666,26 +686,35 @@ In this reading, you explored three key types of constraints used in relational 
 
 
 
-## SQL Scripts - Uses and Applications
+
+
+
+
+
+## Introduction to Relational Databases and Tables: SQL Scripts - Uses and Applications
+
+
 
 ### SQL Scripts
-SQL scripts are a series of commands or a program that will be executed on an SQL server.
+`SQL` scripts are a series of commands or a program that will be executed on an `SQL server`.`SQL scripts` are useful for making complex database changes and can be used to create, modify, or delete database objects such as tables, views, stored procedures, and functions.
 
-SQL scripts are useful for making complex database changes and can be used to create, modify, or delete database objects such as tables, views, stored procedures, and functions.
+
 
 ### Applications of SQL Scripts
-Here are some of the things that you can do with SQL scripts:
-- Create tables: You can use SQL scripts to create new tables in your database. This is useful when you need to add new functionality to your application or when you want to store new types of data.
-- Drop tables: SQL scripts often have commands to Drop tables from databases. This is especially important before Create table commands to make sure that a table with the same name doesnt exist in the database already.
-- Insert data: SQL scripts can also be used to insert data into your tables. This is useful when you need to populate your database with test data or when you want to import data from an external source.
-- Update data: You can use SQL scripts to update existing data in your tables. This is useful when you need to correct errors or update records based on changing business requirements.
-- Delete data: SQL scripts can also be used to delete data from your tables. This is useful when you need to remove old or obsolete records from your database.
-- Create views: Views are virtual tables that allow you to query data from multiple tables as if they were a single table. You can use SQL scripts to create views that simplify complex queries and make it easier to work with your data.
-- Create stored procedures: Stored procedures are precompiled SQL statements that can be executed on demand. You can use SQL scripts to create stored procedures that encapsulate complex business logic and make it easier to manage your database.
-- Create triggers: Triggers are special types of stored procedures that are automatically executed in response to certain events, such as an insert, update, or delete operation. You can use SQL scripts to create triggers that enforce business rules and maintain data integrity.
+Here are some of the things that you can do with `SQL scripts`:
+- **CREATE tables:** You can use SQL scripts to create new tables in your database. This is useful when you need to add new functionality to your application or when you want to store new types of data.
+- **DROP tables:** SQL scripts often have commands to Drop tables from databases. This is especially important before Create table commands to make sure that a table with the same name doesnt exist in the database already.
+- **INSERT data:** SQL scripts can also be used to insert data into your tables. This is useful when you need to populate your database with test data or when you want to import data from an external source.
+- **UPDATE data:** You can use SQL scripts to update existing data in your tables. This is useful when you need to correct errors or update records based on changing business requirements.
+- **DELETE data:** SQL scripts can also be used to delete data from your tables. This is useful when you need to remove old or obsolete records from your database.
+- **Create VIEWS:** Views are virtual tables that allow you to query data from multiple tables as if they were a single table. You can use SQL scripts to create views that simplify complex queries and make it easier to work with your data.
+- **Create stored PROCEDURES:** Stored procedures are precompiled SQL statements that can be executed on demand. You can use SQL scripts to create stored procedures that encapsulate complex business logic and make it easier to manage your database.
+- **Create TRIGGERS:** Triggers are special types of stored procedures that are automatically executed in response to certain events, such as an insert, update, or delete operation. You can use SQL scripts to create triggers that enforce business rules and maintain data integrity.
+
+
 
 ### Example: Creating Tables
-Let us execute a script containing the CREATE TABLE commands for all the tables in a given dataset, rather than create each table manually by typing the DDL commands in the SQL editor.
+Let us execute a script containing the `CREATE TABLE` commands for all the tables in a given dataset, rather than create each table manually by typing the `DDL commands` in the `SQL editor`.
 
 Note the following points about these scripts.
 1. SQL scripts are basically a set of SQL commands compiled in a single file.
@@ -752,7 +781,7 @@ CREATE TABLE MEDICAL_LOCATIONS (
 
 This script incorporates commands to first drop any tables with the mentioned names in the database. After that, the script contains commands to create 5 different tables. All these commands are executed sequentially on the interface.
 
-The contents of this file can be saved in a .sql file format and executed on the phpMyAdmin interface. This can be done by first selecting the database, uploading the SQL script in the provided space, and executing it, as shown in the image below.
+The contents of this file can be saved in a `.sql` file format and executed on the `phpMyAdmin` interface. This can be done by first selecting the database, uploading the SQL script in the provided space, and executing it, as shown in the image below.
 
 ![img006]
 
@@ -766,7 +795,14 @@ You may click any of the tables to see its Table Definition (its list of columns
 
 
 
-### Summary: Relational Database Concepts and Tables
+
+
+
+
+
+
+
+## Introduction to Relational Databases and Tables: Summary: Relational Database Concepts and Tables
 
 Congratulations! You have completed this lesson. At this point in the course, you know:  
 - A database is a repository of data that provides functionality for adding, modifying, and querying the data.  
